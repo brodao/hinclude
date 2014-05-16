@@ -225,7 +225,7 @@ var hinclude;
      * Run javaScripts. 
      */
     runJsScripts: function (element) {
-        var codeJs = $("script[type='text/javascript']");
+    	var codeJs = $("script[type='text/javascript']", element);
         console.debug(codeJs);
         for (var i=0; i < codeJs.length; i++) {
         	jQuery.globalEval(codeJs[i].innerHTML);
